@@ -20,7 +20,12 @@ class ArelXMLHelper
 	 * Tracking type GPS 
 	 */
 	const TRACKING_GPS = "GPS";
-	
+
+    /**
+     * Tracking type Orientation for 360
+     */
+    const TRACKING_ORIENTATION = "Orientation";
+
 	/**
 	 * Tracking type LLA Marker 
 	 */
@@ -114,7 +119,7 @@ class ArelXMLHelper
 	 * @param Array $buttons An array defining buttons to be shown in the pop up / detail display 
 	 
 	 */
-	static public function createLocationBasedPOI($id, $title, $location, $thumbnail, $icon, $description, $buttons)
+	static public function createLocationBasedPOI($id, $title, $location, $thumbnail, $icon, $description, $buttons = array())
 	{
 		$obj = new ArelObjectPoi($id);
 		$obj->setTitle($title);
