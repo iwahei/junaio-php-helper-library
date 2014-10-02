@@ -79,7 +79,6 @@ abstract class ArelAnchor
 
 
     /**
-     * Flags used for the attribute flag of the element screenanchor
      * スクリーンアンカーのフラグ要素
      */
 
