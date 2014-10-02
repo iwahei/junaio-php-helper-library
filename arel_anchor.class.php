@@ -6,97 +6,97 @@
 
 /**
  *
- * Constants for screen anchors
+ * スクリーンアンカー変数
  *
  */
 abstract class ArelAnchor
 {
     /**
-     * No anchor, i.e. not relative-to-screen
+     * アンカー無し
      */
     const ANCHOR_NONE       =	0;
     /**
-     * Anchor to the left edge
+     * 左端に設定
      */
     const ANCHOR_LEFT       =	1;
     /**
-     * Anchor to the right edge
+     * 右端に設定
      */
     const ANCHOR_RIGHT      =	2;
     /**
-     * Anchor to the bottom edge
+     * 下端に設定
      */
     const ANCHOR_BOTTOM     =	4;
     /**
-     * Anchor to the top edge
+     * 上端に設定
      */
     const ANCHOR_TOP        =	8;
     /**
-     * Anchor to the horizontal center
+     * 左右中央に設定
      */
     const ANCHOR_CENTER_H   =	16;
     /**
-     * Anchor to the vertical center
+     * 垂直中心に設定
      */
     const ANCHOR_CENTER_V   =	32;
 
     /**
-     * Anchor to the Top-Left
+     * 左上に設定
      */
     const ANCHOR_TL         =   9;
     /**
-     * Anchor to the Top-Center
+     * 上心に設定
      */
     const ANCHOR_TC         =   24;
     /**
-     * Anchor to the Top-Right
+     * 右上に設定
      */
     const ANCHOR_TR         =   10;
     /**
-     * Anchor to the Center-Left
+     * 中央左に設定
      */
     const ANCHOR_CL         =   33;
     /**
-     * Anchor to the Center
+     * 中央に設定
      */
     const ANCHOR_CC         =   48;
     /**
-     * Anchor to the Center-Right
+     * 中央右に設定
      */
     const ANCHOR_CR         =   34;
     /**
-     * Anchor to the Bottom-Left
+     * 左下に設定
      */
     const ANCHOR_BL         =   5;
     /**
-     * Anchor to the Bottom-Center
+     * 下心に設定
      */
     const ANCHOR_BC         =   20;
     /**
-     * Anchor to the Bottom-Right
+     * 右下に設定
      */
     const ANCHOR_BR         =   6;
 
 
     /**
      * Flags used for the attribute flag of the element screenanchor
-     *
+     * スクリーンアンカーのフラグ要素
      */
 
     /**
-     * No flag, all geometric transforms are considered
+     * フラグ無し
      */
     const FLAG_NONE =						0;
     /**
-     * Ignore rotation of the geometry
+     * 平面における回転を許可しない
      */
     const FLAG_IGNORE_ROTATION =			1;
     /**
-     * Ignore animations of the geometry
+     * 平面におけるアニメーションを許可しない
      */
     const FLAG_IGNORE_ANIMATIONS =			2;
     /**
-     * Do not scale geometry according to the screen resolution
+     * 解像度によるスケールの判定を行わない
      */
     const FLAG_IGNORE_SCREEN_RESOLUTION =	4;
 }
