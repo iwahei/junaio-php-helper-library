@@ -7,7 +7,8 @@ require_once("arel_popup.class.php");
 
 /**
  * 
- * Arel Object Element. This class is not be instantiated, but is a virtual class.
+ * Arelオブジェクト
+ * このクラスはインスタンス化されていませんが, 仮想基本クラスです。
  * @see ArelObjectModel3D 
  * @see ArelObjectPOI
  *
@@ -35,15 +36,15 @@ class ArelObject
 	}
 	
 	/**
-	 * Get Object ID.
-	 * @return String ID of the Object
+	 * オブジェクトIDを取得
+	 * @return オブジェクトID
 	 */
 	public function getID(){
 		return $this->id;
 	}
 
 	/**
-	 * Set Object ID.
+	 * オブジェクトIDをセット
 	 * @param String $id alphanummeric string defining the Object ID.
 	 */
 	public function setID($id){
@@ -51,7 +52,7 @@ class ArelObject
 	}
 	
 	/**
-	 * Get Object Title.
+	 * タイトルを取得
 	 * @param String Title of the Object
 	 */
 	public function getTitle(){
@@ -59,7 +60,7 @@ class ArelObject
 	}
 
 	/**
-	 * Set Object Title.
+	 * タイトルをセット
 	 * @param String $title Title of the Object
 	 */
 	public function setTitle($title){
@@ -67,7 +68,7 @@ class ArelObject
 	}
 
 	/**
-	 * Get Object Popup information.
+	 * ポップアップ情報を取得
 	 * @return arelObjectPopup information for the Object information box 
 	 */
 	public function getPopup(){
@@ -75,7 +76,7 @@ class ArelObject
 	}
 
 	/**
-	 * Set Object Popup information.
+	 * ポップアップ情報をセット
 	 * @param arelObjectPopup $popup information for the Object information box
 	 */
 	public function setPopup($popup){
@@ -83,7 +84,7 @@ class ArelObject
 	}
 
 	/**
-	 * Get Object Location information (location-based Scenes only).
+	 * 位置情報を取得 (位置情報取得サービスのみ).
 	 * @return Array coordination of the Object as latitude, longitude, altitude
 	 */
 	public function getLocation(){
