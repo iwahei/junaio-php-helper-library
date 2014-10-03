@@ -45,7 +45,7 @@ class ArelObject
 
 	/**
 	 * オブジェクトIDをセット
-	 * @param String $id alphanummeric string defining the Object ID.
+	 * @param アルファベットと数字を組み合わせたID
 	 */
 	public function setID($id){
 		$this->id = $id;
@@ -53,7 +53,7 @@ class ArelObject
 	
 	/**
 	 * タイトルを取得
-	 * @param String Title of the Object
+	 * @param タイトル
 	 */
 	public function getTitle(){
 		return $this->title;
@@ -61,7 +61,7 @@ class ArelObject
 
 	/**
 	 * タイトルをセット
-	 * @param String $title Title of the Object
+	 * @param タイトル
 	 */
 	public function setTitle($title){
 		$this->title = $title;
@@ -69,7 +69,7 @@ class ArelObject
 
 	/**
 	 * ポップアップ情報を取得
-	 * @return arelObjectPopup information for the Object information box 
+	 * @return ポップアップ情報（ボックス情報）
 	 */
 	public function getPopup(){
 		return $this->popup;
@@ -77,145 +77,145 @@ class ArelObject
 
 	/**
 	 * ポップアップ情報をセット
-	 * @param arelObjectPopup $popup information for the Object information box
+	 * @param $popup:ポップアップ情報
 	 */
 	public function setPopup($popup){
 		$this->popup = $popup;
 	}
 
 	/**
-	 * 位置情報を取得 (位置情報取得サービスのみ).
-	 * @return Array coordination of the Object as latitude, longitude, altitude
+	 * 位置情報を取得 (位置情報取得サービス対応機種のみ)
+	 * @return Array 緯度、経度、高度
 	 */
 	public function getLocation(){
 		return $this->location;
 	}
 
 	/**
-	 * Set Object Location information (location-based Scenes only).
-	 * @param Array $location coordination of the Object as latitude, longitude, altitude
+	 * 位置情報をセット (位置情報取得サービス対応機種のみ)
+	 * @param Array $location:緯度、経度、高度
 	 */
 	public function setLocation($location){
 		$this->location = $location;
 	}
 
 	/**
-	 * Get Object icon path for the image as being displayed in the MapView (location-based Scenes only).
-	 * @return String path where to retrieve the map icon from
+	 * マップビューに表示するアイコン画像のパスを取得（位置情報取得サービス対応機種のみ）
+	 * @return マップアイコンの画像パス
 	 */
 	public function getIcon(){
 		return $this->iconPath;
 	}
 
 	/**
-	 * Set Object icon path for the image as being displayed in the MapView (location-based Scenes only).
-	 * @param String $iconPath path where to retrieve the map icon from
+	 * マップビューに表示するアイコン画像のパスをセット（位置情報取得サービス対応機種のみ）
+	 * @param $iconPath：マップアイコンの画像パス
 	 */
 	public function setIcon($iconPath){
 		$this->iconPath = $iconPath;
 	}
 
 	/**
-	 * Get Object thumbnail path for the image as being displayed in the ListView (location-based Scenes only).
-	 * @return String path where to retrieve the list thumb from
+	 * リストビューに表示するサムネイル画像を取得（位置情報取得サービス対応機種のみ）
+	 * @return サムネイル画像のパス
 	 */
 	public function getThumbnail(){
 		return $this->thumbnailPath;
 	}
 
 	/**
-	 * Set Object thumbnail path for the image as being displayed in the ListView (location-based Scenes only).
-	 * @param String $thumbnailPath path where to retrieve the list thumb from
+	 * リストビューに表示するサムネイル画像をセット（位置情報取得サービス対応機種のみ）
+	 * @param $thumbnailPath：サムネイル画像のパス
 	 */
 	public function setThumbnail($thumbnailPath){
 		$this->thumbnailPath = $thumbnailPath;
 	}
 
 	/**
-	 * Get the minimum accuracy of the sensors to display the Object (location-based Scenes only).
-	 * @return int Value in m (will be 1 for displaying an Object only if a LLA Marker is scanned)  
+	 * ディスプレイセンサーの正確さを取得（位置情報取得サービス対応機種のみ）
+	 * @return 数値 (LLAマーカーがスキャンされた場合のみ、1になる)  
 	 */
 	public function getMinAccuracy(){
 		return $this->minaccuracy;
 	}
 
 	/**
-	 * Set the minimum accuracy of the sensors to display the Object (location-based Scenes only).
-	 * @param int $minaccuracy Value in m (set 1 for displaying an Object only if a LLA Marker is scanned)  
+	 * ディスプレイセンサーの正確さをセット（位置情報取得サービス対応機種のみ）
+	 * @param int $minaccuracy：(LLAマーカーがスキャンされた場合のみ、1になる)  
 	 */
 	public function setMinAccuracy($minaccuracy){
 		$this->minaccuracy = $minaccuracy;
 	}
 
 	/**
-	 * Get the maximum distance to the Object to display it (location-based Scenes only).
-	 * @return int maxdistance Value in m  
+	 * 最大距離を取得 (位置情報取得サービス対応機種のみ)
+	 * @return int：最大距離
 	 */
 	public function getMaxDistance(){
 		return $this->maxdistance;
 	}
 
 	/**
-	 * Set the maximum distance to the Object to display it (location-based Scenes only).OBJECT_STATE_LOADING
-	 * @param int $maxdistance Value in m  
+	 * 最大距離をセット (位置情報取得サービス対応機種のみ)
+	 * @param int $maxdistance：最大距離
 	 */
 	public function setMaxDistance($maxdistance){
 		$this->maxdistance = $maxdistance;
 	}
 
 	/**
-	 * Get the maximum distance to the Object to display it (location-based Scenes only).
-	 * @return int mindistance Value in m  
+	 * 最小距離を取得 (位置情報取得サービス対応機種のみ)
+	 * @return int mindistance：最小距離
 	 */
 	public function getMinDistance(){
 		return $this->mindistance;
 	}
 
 	/**
-	 * Set the maximum distance to the Object to display it (location-based Scenes only).
-	 * @param int $mindistance mindistance Value in m  
+	 * 最小距離をセット (位置情報取得サービス対応機種のみ)
+	 * @param int $mindistance：最小距離
 	 */
 	public function setMinDistance($mindistance){
 		$this->mindistance = $mindistance;
 	}
 
-	/** Get all parameters for the object
-	 * @return Array object with KEY => VALUE 
+	/** すべてのパラメーターを取得
+	 * @return Array object：KEY => VALUE 
 	 */
 	public function getParameters(){
 		return $this->parameters;
 	}
 
 	/**
-	 * Use this method to set parameters for an object
-	 * @param Array $parameters parameters of an object e.g. {"test" : 1, "url": "www.junaio.com"}
+	 * パラメータをセット
+	 * @param Array $parameters：パラメーター example:{"test" : 1, "url": "www.junaio.com"}
 	 */
 	public function setParameters($parameters){
 		$this->parameters = $parameters;
 	}
 	
 	/**
-	 * Add single Parameter to an object
-	 * @param String $key Key of the parameter
-	 * @param String $value Value of the parameter
+	 * 一つのパラメータを追加
+	 * @param String $key：パラメータのkeyをセット
+	 * @param String $value：パラメーターの値をセット
 	 */
 	public function addParameter($key, $value){
 		$this->parameters[$key] = $value;
 	}
 	
 	/**
-	 * Set the visibility for an Object for MapView, ListView, LiveView and Radar. For GLUE, only LiveView is supported.
-	 * @param Boolean $liveview set true if the Object should be shown in Live View, false if hidden, undefined is unchanged
-	 * @param Boolean $maplist set true if the Object should be shown on the Map and in the List, false if hidden, undefined is unchanged
-	 * @param Boolean $radar set true if the Object should be shown on the radar, false if hidden, undefined is unchanged
+	 * マップビュー、リストビュー、ライブビュー、レーダーの表示設定。（GLUEに関しては、ライブビューのみサポート）
+	 * @param Boolean $liveview true：表示, false：非表示, undefined：変更無し
+	 * @param Boolean $maplist true：表示, false：非表示, undefined：変更無し
+	 * @param Boolean $radar true：表示, false：非表示, undefined：変更無し
 	 */
 	public function setVisibility($liveview, $maplist, $radar){
 		$this->visibility = array("liveview" => $liveview, "maplist" => $maplist, "radar" => $radar);
 	}
 	
 	/**
-	 * use this method to determine whether an object can be picked or not (clicked)
-	 * @param Array visibility information of the Object {"liveview": bool, "maplist": bool, "radar": bool}  
+	 * オブジェクトがクリックされたか否かでメソッド使用の判定
+	 * @param Array 表示情報 exapmle:{"liveview": bool, "maplist": bool, "radar": bool}  
 	 */
 	public function getVisibility(){
 		return $this->visibility;
