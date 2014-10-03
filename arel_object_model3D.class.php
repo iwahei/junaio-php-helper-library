@@ -106,23 +106,23 @@ class ArelObjectModel3D extends ArelObject
 	}
 
 	/**
-	 * Get whether the Object is an occlusion Object
-	 * @return Boolean true if Object is an occlusion model
+	 * オブジェクトが閉塞かどうかの判定
+	 * @return Boolean：trueであれば閉塞モデル
 	 */  
 	public function isOccluding(){
 		return $this->occlusion;
 	}
 
 	/**
-	 * Set the Objects to be an occlusion Object
-	 * @param Boolean $occlusion true if Object is supposed to be an occlusion model
+	 * 閉塞オブジェクトを設定
+	 * @param Boolean $occlusion：trueであれば、閉塞モデルを設定
 	 */ 
 	public function setOccluding($occlusion){
 		$this->occlusion = $occlusion;
 	}
 
 	/**
-	 * Get the path to the model file (md2) or zip for obj/md2s
+	 * モデルファイルを取得（ファイル：md2 or zip）
 	 *  @see getMovie()
 	 *  @see getTexture()
 	 * @return String model path
@@ -132,67 +132,67 @@ class ArelObjectModel3D extends ArelObject
 	}
 
 	/**
-	 * Set the path to the model file (md2) or zip for obj/md2s
+	 * モデルファイルを設定（ファイル：md2 or zip）
 	 * @see setMovie()
 	 * @see setTexture()
-	 * @param String $model path to the model resource (geometry) as md2 or obj (zipped)
+	 * @param String $model： モデルリソースのパス。（md2 or zip）
 	 */ 
 	public function setModel($model){
 		$this->model = $model;
 	}
 
 	/**
-	 * Get the path to the texture file (jpg/png) which is mapped on the model - can be undefined if zipped obj or md2 used or movie is set
+	 * モデルに貼るテクスチャファイルのパス（jpg/png）の取得 （md2 or zip or movieがセットされている場合、undefindになりうる）
 	 * @see getModel()
 	 * @see getMovie()
-	 * @return String texture path
+	 * @return String：テクスチャファイルのパス
 	 */  
 	public function getTexture(){
 		return $this->texture;
 	}
 
 	/**
-	 * Set the path to the texture file (jpg/png) which is mapped on the model - not required if zipped obj or md2 used or movie is set
+	 * モデルに貼るテクスチャファイルのパス（jpg/png）の設定 （md2 or zip or movieがセットされている場合、undefindになりうる）
 	 * @see setModel()
 	 * @see setTexture()
-	 * @param String $texture path to the model's texture
+	 * @param String $texture：モデルのテクスチャファイルのパス
 	 */ 
 	public function setTexture($texture){
 		$this->texture = $texture;
 	}
 
 	/**
-	 * Get the path to the movie file(3g2) mapped on the 3D model - can be undefined if zipped obj or md2 used or texture is set
+	 * モデルに貼るmovieファイル（3g2）の取得 （md2 or zip のテクスチャファイルがセットされている場合、undefindになりうる）
 	 * @see getModel()
 	 * @see getTexture()
-	 * @return String movie path
+	 * @return String：movieファイルのパス
 	 */  
 	public function getMovie(){
 		return $this->movie;
 	}
 
 	/**
-	 * Set the path to the movie file (3g2) to be mapped on the model
+	 * モデルに貼るmovieファイル（3g2）の設定
 	 * @see setModel()
 	 * @see setTexture()
 	 * @see createFromMovie()
-	 * @param String $movie path to a movie that shall be mapped on the 3D model 
+	 * @param String $movie：movieファイルのパス
 	 */ 
 	public function setMovie($movie){
 		$this->movie = $movie;
 	}
 
 	/**
-	 * Get the ID of the coordinateSystem the object is currently attached to (only valid feedback for GLUE channels/obejcts)
-	 * @return int the coordinateSystem ID the object is bound to
+	 * コーディネートシステムIDを取得（GLUE channels/objects に対してのみ有効なフィードバック）
+	 * @return int：コーディネートシステムID
 	 */  
 	public function getCoordinateSystemID(){
 		return $this->coordinateSystemID;
 	}
 
 	/**
-	 * Set the ID of the coordinateSystem the object is currently attached to (only valid feedback for GLUE channels/obejcts)
-	 * @param int $coordinateSystemID the coordinateSystem ID the object is bound to
+	 * コーディネートシステムIDを設定（GLUE channels/objects に対してのみ有効なフィードバック）
+	 * @param int $coordinateSystemID：コーディネートシステムID
 	 */ 
 	public function setCoordinateSystemID($coordinateSystemID){
 		$this->coordinateSystemID = $coordinateSystemID;
