@@ -37,7 +37,7 @@ class ArelObject
 	
 	/**
 	 * オブジェクトIDを取得
-	 * @return オブジェクトID
+	 * @return String ID：オブジェクトID
 	 */
 	public function getID(){
 		return $this->id;
@@ -45,7 +45,7 @@ class ArelObject
 
 	/**
 	 * オブジェクトIDをセット
-	 * @param アルファベットと数字を組み合わせたID
+	 * @param String $id：アルファベットと数字を組み合わせたID
 	 */
 	public function setID($id){
 		$this->id = $id;
@@ -53,7 +53,7 @@ class ArelObject
 	
 	/**
 	 * タイトルを取得
-	 * @param タイトル
+	 * @param String Title：タイトル
 	 */
 	public function getTitle(){
 		return $this->title;
@@ -61,7 +61,7 @@ class ArelObject
 
 	/**
 	 * タイトルをセット
-	 * @param タイトル
+	 * @param $String Title：タイトル
 	 */
 	public function setTitle($title){
 		$this->title = $title;
@@ -85,7 +85,7 @@ class ArelObject
 
 	/**
 	 * 位置情報を取得 (位置情報取得サービス対応機種のみ)
-	 * @return Array 緯度、経度、高度
+	 * @return Array coordination：緯度、経度、高度
 	 */
 	public function getLocation(){
 		return $this->location;
