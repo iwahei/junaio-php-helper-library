@@ -74,31 +74,31 @@ class ArelObjectModel3D extends ArelObject
 	}
 	
 	/**
-	 * Get Objects Rotation
-	 * @return ArelRotation Rotation of the object
+	 * 回転に関するオブジェクト取得
+	 * @return オブジェクトの回転に関する情報
 	 */
 	public function getRotation(){
 		return $this->rotation;
 	}
 
 	/**
-	 * Set Objects Rotation
-	 * @param ArelRotation $rotation Provides the rotation information. Can be defined as euler (rad / deg), quaternion, axisangle or matrix 
+	 * 回転に関するオブジェクト設定
+	 * @param ArelRotation $rotation：角度, 四元数, 軸の角度 or マトリックスを設定
 	 */
 	public function setRotation($rotation){
 		$this->rotation = $rotation;		
 	}
 	
 	/**
-	 * Get Objects Scale
-	 * @return Array Scale of the object
+	 * オブジェクトのスケールを取得
+	 * @return Array：スケール情報
 	 */
 	public function getScale(){
 		return $this->scale;
 	}
 
 	/**
-	 * Set Objects Scale
+	 * オブジェクトのスケールを設定
 	 * @param Array An array providing scale values along three axis (x, y, z)
 	 */
 	public function setScale($scale){
