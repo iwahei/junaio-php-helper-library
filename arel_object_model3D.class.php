@@ -32,7 +32,7 @@ class ArelObjectModel3D extends ArelObject
 	private $screenAnchorFlag = NULL;
 
 	/**
-	 * Create the model
+	 * モデル作成
 	 * @param String $id
 	 */
 	public function __construct($id)
@@ -43,7 +43,7 @@ class ArelObjectModel3D extends ArelObject
 	}	
 			
 	/**
-	 * Get Objects currently defined parent
+	 * 現在定義されている親オブジェクトを取得
 	 * @return String the currently defined parent
 	 */
 	public function getTransformParent(){
@@ -51,23 +51,23 @@ class ArelObjectModel3D extends ArelObject
 	}
 	
 	/**
-	 * Set Objects current object
-	 * @param String the parent object
+	 * オブジェクトを設定
+	 * @param String：親オブジェクト
 	 */
 	public function setTransformParent($transformParent){
 		$this->transformParent = $transformParent;
 	}
 
 	/**
-	 * Get Objects Translation
-	 * @return Array An array given all translation parameters x,y,z
+	 * 移動に関するオブジェクト取得
+	 * @return Array：x,y,z
 	 */
 	public function getTranslation(){
 		return $this->translation;
 	}
 	/**
-	 * Set Objects Translation
-	 * @param Array $translation An array given all translation parameters x,y,z
+	 * 移動に関するオブジェクト設定
+	 * @param Array $translation：x,y,z
 	 */
 	public function setTranslation($translation){
 		$this->translation = $translation;
