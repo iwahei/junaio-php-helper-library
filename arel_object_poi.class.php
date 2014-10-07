@@ -9,7 +9,7 @@ require_once("arel_object.class.php");
 
 /**
  * 
- * Arel Object Location Based POI Element.
+ * Arelオブジェクト（ロケーションベースのPOI要素のオブジェクト）
  *
  */
 class ArelObjectPoi extends ArelObject
