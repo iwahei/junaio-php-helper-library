@@ -223,83 +223,83 @@ class ArelObjectModel3D extends ArelObject
     }
 
     /**
-     * Get the screen anchor where the object is placed
-     * @return int Anchor constant of the screen position @see ArelAnchor
+     * オブジェクトのスクリーンアンカーの位置を取得
+     * @return int：スクリーン上にあるアンカーの位置
      */
     public function getScreenAnchor() {
         return $this->screenAnchor;
     }
 
     /**
-     * Sets the flags that will be used to modify the object behavior when placed relative to the screen
-     * @param int $screenAnchorFlag Constant defining the behavior of the object @see ArelAnchor
+     * 画面に相対的に配置されたオブジェクトの動作を変更するか否かのフラグを設定
+     * @param int $screenAnchorFlag：@see のアンカーの動作を定義
      */
     public function setScreenAnchorFlag($screenAnchorFlag) {
         $this->screenAnchorFlag = $screenAnchorFlag;
     }
 
     /**
-     * Get the screen anchor flag used to modify the objects behavior when it is placed relative to the screen
-     * @return int Anchor constant of the screen position @see ArelAnchor
+     * 画面に相対的に配置されたオブジェクトの動作を変更するか否かのフラグを取得
+     * @return int：@see のスクリーン上の位置
      */
     public function getScreenAnchorFlag() {
         return $this->screenAnchorFlag;
     }
 
    	/**
-	 * Get the transparency of the 3D model.
-	 * @return Float The transparency value, where 1 corresponds to an invisible model and 0 corresponds to a fully opaque model).
+	 * 3Dモデルの透明度を取得
+	 * @return Float：透明度（1：不可視モデルに対応、0：完全に不透明なモデルに対応）
 	 */
 	public function getTransparency(){
 		return $this->transparency;
 	}
 	
 	/**
-	 * Set the transparency of the 3D model.
-	 * @param Float $transparency The transparency value, where 1 corresponds to an invisible model and 0 corresponds to a fully opaque model).
+	 * 3Dモデルの透明度を設定
+	 * @param Float $transparency：透明度（1：不可視モデルに対応、0：完全に不透明なモデルに対応）
 	 */
 	public function setTransparency($transparency){
 		$this->transparency = $transparency;
 	}
 
 	/**
-	 * Get the position where the object will be rendered. The z-Buffer will be ignored.
+	 * オブジェクトがレンダリングされる位置を取得（Zバッファは無視される）
 
-	 * @return int Get the z-Buffer position of where the object shall be rendered. The "calculated" z-Buffer will be ignored. 
+	 * @return int：オブジェクトがレンダリングされる場所（計算されたzバッファは無視される）
 	 */
 	public function getRenderorderPosition(){
 		return $this->renderorderposition;
 	}
 
 	/**
-	 * Set the position where the object will be rendered. The z-Buffer will be ignored.
+	 * オブジェクトがレンダリングされる位置を設定（Zバッファは無視される）
 
-	 * @param int $renderorderposition set the z-Buffer position of where the object shall be rendered. The "calculated" z-Buffer will be ignored. 
+	 * @param int $renderorderposition：オブジェクトがレンダリングされる場所（計算されたzバッファは無視される）
 	 */
 	public function setRenderOrderPosition($renderorderposition){
 		$this->renderorderposition = $renderorderposition;
 	}
 
 	/**
-	 * Use this method to determine whether an object can be picked or not (clicked)
-	 * @return Boolean true if picking is enabled, false otherwise
+	 * オブジェクトがピックアップされるかどうかの判定
+	 * @return Boolean true：ピックアップする、false：ピックアップしない
 	 */
 	public function isPickingEnabled(){
 		return $this->picking;
 	}
 
 	/**
-	 * Use this method to declare whether an object can be picked or not (clicked)
-	 * @param Boolean $picking true to enable picking of this model, false to disable it 
+	 * オブジェクトがピックアップするように設定
+	 * @param Boolean $picking：true or false
 	 */
 	public function setPickingEnabled($picking){
 		$this->picking = $picking;
 	}
 	
 	/**
-	 * Create an Image 3D Model based on an image provided.
-	 * @param String $_id object id
-	 * @param String $_imagePath path to the image that shall be rendered
+	 * 画像に基いて3Dモデルを作成
+	 * @param String $_id：オブジェクトID
+	 * @param String $_imagePath：画像のパス
 	 * @static
 	 */
 	public static function createFromImage($_id, $_imagePath)
@@ -311,9 +311,9 @@ class ArelObjectModel3D extends ArelObject
 	}
 
 	/**
-	 * Create a Movie 3D Model based on an the movie file provided.
-	 * @param String $_id object id
-	 * @param String $_moviePath path to the image that shall be rendered
+	 * 動画に基いて3Dモデルを作成
+	 * @param String $_id：オブジェクトID
+	 * @param String $_moviePath：動画のパス
 	 * @static
 	 */
 	public static function createFromMovie($_id, $_moviePath)
@@ -325,10 +325,10 @@ class ArelObjectModel3D extends ArelObject
 	}
 	
 	/**
-	 * Create an 3D Model based on model and texture (can also only have modelPath if the model is a zipped obj or md2 including the texture) 
-	 * @param String $_id object id
-	 * @param String $_modelPath path to the model's texture
-	 * @param String $_texturePath path to the model's texture
+	 * モデルやテクスチャに基いて3Dモデルを作成
+	 * @param String $_id：オブジェクトID
+	 * @param String $_modelPath：モデルのパス
+	 * @param String $_texturePath：テクスチャのパス
 	 * @static
 	 */
 	public static function create($_id, $_modelPath, $_texturePath)
