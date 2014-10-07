@@ -6,7 +6,7 @@
 
 /**
  * 
- * Popup element for arel Objects
+ * arelオブジェクトのポップアップ要素
  *
  */
 class ArelPopup
@@ -15,25 +15,27 @@ class ArelPopup
 	private $description = NULL;
 	
 	/**
-	 * Set available buttons for the popup
-	 * @param Array $button Array with buttons (array with name, id and value) definition
-	 * e.g. array(array("url", "1", "http://www.junaio.com"), array("sound", "2", "http://www.junaio.com/song.mp3))
+	 * ポップアップのボタンを設定
+	 * @param Array $button：配列でボタンの要素を指定
+	 * 例：array(array("url", "1", "http://www.junaio.com"), array("sound", "2", "http://www.junaio.com/song.mp3))
 	 */
 	public function setButtons($button){
 		$this->buttons = $button;
 	}
 	
 	/**
-	 * Get available buttons for the popup
-	 * @return Array array of buttons e.g. array(array("url", "1", "http://www.junaio.com"), array("sound", "2", "http://www.junaio.com/song.mp3))
+	 * ポップアップのボタンを取得
+	 * @return Array：配列でボタンの要素を指定　
+     * 例：array(array("url", "1", "http://www.junaio.com"), array("sound", "2", "http://www.junaio.com/song.mp3))
 	 */ 
 	public function getButtons(){
 		return $this->buttons;
 	}
 	
 	/** 
-	 * Add a single button to the pop up
-	 * @param Array $button A button to be displayed in the pop up (e.g. array(array("url", "1", "http://www.junaio.com"), array("sound", "2", "http://www.junaio.com/song.mp3)))
+	 * ポップアップの単一なボタンを追加
+	 * @param Array $button：配列でボタンの要素を指定
+     * 例：array(array("url", "1", "http://www.junaio.com"), array("sound", "2", "http://www.junaio.com/song.mp3)))
 	 */
 	
 	public function addButton($button){
@@ -41,16 +43,16 @@ class ArelPopup
 	}
 	
 	/**
-	 * Set text to be displayed on the pop up
-	 * @param String $description description text 
+	 * ポップアップ上のテキストを設定
+	 * @param String $description：説明文
 	 */
 	public function setDescription($description){
 		$this->description = $description;
 	}
 	
 	/**
-	 * Get text to be displayed on the pop up
-	 * @return String description text 
+	 * ポップアップ上のテキストを取得
+	 * @return String：説明文
 	 */
 	public function getDescription(){
 		return $this->description;
