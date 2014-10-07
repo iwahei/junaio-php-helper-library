@@ -6,7 +6,7 @@
  **/
 
 /**
- * @brief ArelRotation is used to represent 3D rotations
+ * @brief ArelRotationは3D回転を表すために使用
  *
  */
 class ArelRotation
