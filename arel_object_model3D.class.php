@@ -199,24 +199,24 @@ class ArelObjectModel3D extends ArelObject
 	}
 	
 	/**
-	 * Get Objects currently defined shader material
-	 * @return String the currently defined shader material 
+	 * 現在定義されているシェーダマテリアルを取得
+	 * @return String：シェーダマテリアル
 	 */  
 	public function getShaderMaterial(){
 		return $this->shaderMaterial;
 	}
 
 	/**
-	 * Set Objects shader material. For this to work, you also have to define global shaderMaterials
-	 * @param String URL to the shader Materials file
+	 * シェーダマテリアルをセット。（機能させるためには、グローバルシェーダマテリアルを定義する必要有り）
+	 * @param String：シェーダマテリアルのファイルのパスをセット
 	 */ 
 	public function setShaderMaterial($shaderMaterial){
 		$this->shaderMaterial = $shaderMaterial;
 	}
 	
     /**
-     * Sets the coordinates of the object relative to the screen anchor passed as the first argument
-     * @param int $screenAnchor Constant defining the screen anchor where the object will be placed @see ArelAnchor
+     * スクリーンアンカーに物体の座標を設定。
+     * @param int $screenAnchor：配置するスクリーンアンカーの定数を指定
      */
     public function setScreenAnchor($screenAnchor) {
         $this->screenAnchor = $screenAnchor;
