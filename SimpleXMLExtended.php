@@ -1,6 +1,6 @@
 <?php
 /**
- * Extending the SimpleXMLElememnt as described e.g. here:
+ * SimpleXMLElememntの拡張例
  * http://trirand.com/blog/phpjqgrid/docs/jqGrid/SimpleXMLExtended.html
  */
 class SimpleXMLExtended extends SimpleXMLElement
