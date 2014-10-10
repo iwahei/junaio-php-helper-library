@@ -12,27 +12,27 @@
 class ArelRotation
 {
 	/**
-	 * @brief Defines Rotation to be Euler rotation with degree values	
+	 * @brief 度の値を持つオイラー回転である時の回転を定義
 	 */
 	const ROTATION_EULERDEG = "eulerdeg";
 	
 	/**
-	 * @brief Defines Rotation to be Euler rotation with radians values
+	 * @brief ラジアン値を持つオイラー回転である時の回転を定義
 	*/
 	const ROTATION_EULERRAD = "eulerrad";
 	
 	/**
-	 * @brief Defines Rotation to be AxisAngle (x,y,z,angle in radians)
+	 * @brief 回転AxisAngleの定義 (x,y,z　ラジアン角)
 	*/
 	const ROTATION_AXISANGLE = "axisangle";
 	
 	/**
-	 * @brief Defines Rotation Matrix (m0..m8)
+	 * @brief 回転マトリックスの定義 (m0..m8)
 	*/
 	const ROTATION_MATRIX = "matrix";
 	
 	/**
-	 * @brief Defines Rotation to be Quaternion (q1..q4)
+	 * @brief 4元数回転の定義 (q1..q4)
 	*/
 	const ROTATION_QUATERNION = "quaternion";
 	
