@@ -40,46 +40,46 @@ class ArelRotation
 	private $rotation = array(0,0,0);
 	
 	/**
-	 * @brief Construct a rotation object
-	 * @param String $type one of ArelRotation::ROTATION_EULERDEG, ArelRotation::ROTATION_EULERRAD, ArelRotation::ROTATION_AXISANGLE, ArelRotation::ROTATION_MATRIX or ArelRotation::ROTATION_QUATERNION
-	 * @param Array $values Rotation values according to the type specified 
+	 * @brief 回転オブジェクトの構築
+	 * @param String $type：ArelRotation::ROTATION_EULERDEG, ArelRotation::ROTATION_EULERRAD, ArelRotation::ROTATION_AXISANGLE, ArelRotation::ROTATION_MATRIX もしくは ArelRotation::ROTATION_QUATERNIONの一つ
+	 * @param Array $values：指定した型に応じた回転値
 	 */
 	public function __construct($type = NULL, $values = NULL)
 	{
 		if(!empty($type))
-			$this->rotationType = $type;
+			$this->rotationType = $type;していｓ
 			
 		if(!empty($values))
 			$this->rotation = $values;		
 	}
 	
 	/**
-	 * @brief Get the rotation values 
-	 * @return Array Rotation values
+	 * @brief 回転値の取得
+	 * @return Array：回転値
 	 */
 	public function getRotationValues(){
 		return $this->rotation;
 	}
 
 	/**
-	 * @brief Set the rotation values
-	 * @param Array $rotationValueArray Rotation values according to the type specified
+	 * @brief 回転値の設定 
+	 * @param Array $rotationValueArray：指定した型に応じた回転値
 	 */
 	public function setRotationValues($rotationValueArray){
 		$this->rotation = $rotationValueArray;
 	}
 	
 	/**
-	 * @brief Get the rotation type
-	 * @return String one of ArelRotation::ROTATION_EULERDEG, ArelRotation::ROTATION_EULERRAD, ArelRotation::ROTATION_AXISANGLE, ArelRotation::ROTATION_MATRIX or ArelRotation::ROTATION_QUATERNION
+	 * @brief 回転のタイプを取得
+	 * @return String：ArelRotation::ROTATION_EULERDEG, ArelRotation::ROTATION_EULERRAD, ArelRotation::ROTATION_AXISANGLE, ArelRotation::ROTATION_MATRIX もしくは ArelRotation::ROTATION_QUATERNIONの一つ
 	 */
 	public function getRotationType(){
 		return $this->rotationType;
 	}
 	
 	/**
-	 * @brief Set rotation type
-	 * @param String one of ArelRotation::ROTATION_EULERDEG, ArelRotation::ROTATION_EULERRAD, ArelRotation::ROTATION_AXISANGLE, ArelRotation::ROTATION_MATRIX or ArelRotation::ROTATION_QUATERNION
+	 * @brief 回転のタイプを設置
+	 * @param String：ArelRotation::ROTATION_EULERDEG, ArelRotation::ROTATION_EULERRAD, ArelRotation::ROTATION_AXISANGLE, ArelRotation::ROTATION_MATRIX もしくは ArelRotation::ROTATION_QUATERNIONの一つ
 	 */
 	public function setRotationType($rotationType){
 		$this->rotationType = $rotationType;		
