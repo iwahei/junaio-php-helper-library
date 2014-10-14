@@ -37,7 +37,7 @@ class ArelXMLHelper
 	const TRACKING_BARCODE_QR = "Code";
 
 
-	/** @brief 3Dモデルベースの基本的な場所を作成
+	/** @brief 3Dモデルベースの基本的なロケーションを作成
 	 * @param String $id：arelオブジェクトのID
 	 * @param String $title：ARELオブジェクトのタイトルも同様に、リストとマップとして（追加した場合）ポップアップで表示
 	 * @param String $model:：オブジェクトのモデルに、またはすべての情報を保持するzipパッケージへのパス
@@ -62,14 +62,14 @@ class ArelXMLHelper
 	}
 	
 	/**
-	 * @brief Create a basic Location Based 3D Movie Texture.
-	 * @param String $id Id of the AREL Object
-	 * @param String $title Title of the AREL Object to be displayed in the popup (if added) as well as list and map
-	 * @param String $moviePath Path to the 3G2 movie that shall be displayed in the real world 
-	 * @param Array $location An array given all location parameters (latitude, longitude and altitude)
-	 * @param Array $scale An array providing scale values along three axis (x, y, z)
-	 * @param ArelRotation $rotation Provides the rotation information. Can be defined as euler (rad / deg), quaternion, axisangle or matrix 
-	 * @param String $icon provides an icon how the model will be displayed on a map (optional)
+	 * @brief 3Dムービーテクスチャベースの基本的なロケーションを作成
+	 * @param String $id：arelオブジェクトのID
+	 * @param String $title：ARELオブジェクトのタイトルも同様に、リストとマップとして（追加した場合）ポップアップで表示
+	 * @param String $moviePath：現実世界で表示する3g2動画へのパス
+	 * @param Array $location：位置パラメータの配列（緯度、経度、高度）
+	 * @param Array $scale：3軸に沿ってスケール値を提供する配列(x、y、z)
+	 * @param ArelRotation $rotation：回転情報を提供。オイラー（ラジアン/度）、四元、axisangleまたはマトリクスとして定義することが可能。
+	 * @param String $icon：地図上に表示されるアイコンを提供する(オプション)
 	 */
 	static public function createLocationBasedModel3DFromMovie($id, $title, $moviePath, $location, $scale, $rotation, $icon = NULL)
 	{
