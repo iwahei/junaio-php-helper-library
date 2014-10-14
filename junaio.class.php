@@ -3,32 +3,32 @@
  * @copyright  Copyright 2012 metaio GmbH. All rights reserved.
  * @author     Frank Angermann
  *
- * This class provides the authentication on the developers server. The Authorization header of the incoming call is checked and vaidated against the authentication
- * defined. If this is not successful, the call dos not come from junaio.
+ * このクラスは、開発者のサーバー上で認証を提供します。Authorizationヘッダーをチェックし、定義された認証に対して検証されます。
+ * これが成功しない場合、junaioからコールバックが来ていません。
  **/
 
 class Junaio {
 
 	/**
-	Check the authorization header of the incoming call against the junaio authentication.
-	@return Boolean true if successful, false if not
+	junaio認証に対する許可ヘッダーを確認
+	@return Boolean：true(成功)、false(失敗)
 	*/
 	public static function checkAuthentication() {
 
 		$_HEADERS = getallheaders();
 		
-		// Check if authorization header is there
+		// 許可ヘッダーがあるかどうか確認
 		if (!isset($_HEADERS['Authorization'])) {
 			return FALSE;
 		}
 		$sAuthentication = $_HEADERS['Authorization'];
 
-		// Check if authorization header is of "junaio" type
+		// 許可ヘッダーが"junaio"タイプであるか確認
 		if(strpos($sAuthentication, 'junaio') != 0) {
 			return FALSE;
 		}
 
-		// Check date header
+		// 日付ヘッダーの確認
 		$sDate = $_HEADERS['Date'];
 		$iParsedDate = strtotime($sDate);
 		$iNow = time();
@@ -37,7 +37,7 @@ class Junaio {
 			return FALSE;
 		}
 
-		// Prepare signature variables
+		// 署名変数を確認
 		$aTokens = explode(' ', $sAuthentication);
 		if (!isset($aTokens[1]) || trim($aTokens[1]) == '') {
 			// No signature string there
@@ -45,7 +45,7 @@ class Junaio {
 		}
 		$sRequestSignature = base64_decode(trim($aTokens[1]));
 
-		// Build server request signature
+		// サーバーへ署名の要求
 		$sServerRequestSignature = sha1(
 			JUNAIO_KEY . sha1(
 				JUNAIO_KEY .
@@ -55,7 +55,7 @@ class Junaio {
 			)
 		);
 
-		// Compare request signature
+		// 署名の要求の比較
 		if(strcmp($sRequestSignature, $sServerRequestSignature) !== 0) {
 			// Incorrect authentication
 			return FALSE;
