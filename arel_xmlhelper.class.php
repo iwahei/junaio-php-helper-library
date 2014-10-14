@@ -147,7 +147,7 @@ class ArelXMLHelper
 	 * @param Array $translation：移動パラメータのx、y、z
 	 * @param Array $scale：3軸に沿ってスケール値を提供(x, y, z)
 	 * @param ArelRotation $rotation：回転情報を提供。オイラー（ラジアン/度）、四元、axisangleまたはマトリクスとして定義することが可能。
-	 * @param Int $renderPosition If you have multiple 360Objects created with transparencies
+	 * @param Int $renderPosition：透明度で複数の360オブジェクト作成
 	 */
 	static public function create360Object($id, $model, $texture, $translation, $scale, $rotation, $renderPosition = NULL)
 	{
