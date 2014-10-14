@@ -43,7 +43,7 @@ class ArelXMLHelper
 	 * @param String $model:：オブジェクトのモデルに、またはすべての情報を保持するzipパッケージへのパス
 	 * @param String $texture：オブジェクトのテクスチャへのパス（JPGまたはPNGファイル）
 	 * @param Array $location：位置パラメータの配列（緯度、経度、高度）
-	 * @param Array $scale：3軸に沿ってスケール値を提供する配列(x、y、z)
+	 * @param Array $scale：3軸に沿ってスケール値を提供(x, y, z)
 	 * @param ArelRotation $rotation：回転情報を提供。オイラー（ラジアン/度）、四元、axisangleまたはマトリクスとして定義することが可能。
 	 * @param String $icon：地図上に表示されるアイコンを提供する(オプション)
 	 */
@@ -67,7 +67,7 @@ class ArelXMLHelper
 	 * @param String $title：ARELオブジェクトのタイトルも同様に、リストとマップとして（追加した場合）ポップアップで表示
 	 * @param String $moviePath：現実世界で表示する3g2動画へのパス
 	 * @param Array $location：位置パラメータの配列（緯度、経度、高度）
-	 * @param Array $scale：3軸に沿ってスケール値を提供する配列(x、y、z)
+	 * @param Array $scale：3軸に沿ってスケール値を提供(x, y, z)
 	 * @param ArelRotation $rotation：回転情報を提供。オイラー（ラジアン/度）、四元、axisangleまたはマトリクスとして定義することが可能。
 	 * @param String $icon：地図上に表示されるアイコンを提供する(オプション)
 	 */
@@ -85,14 +85,14 @@ class ArelXMLHelper
 	}
 	
 	/**
-	 * @brief Create a basic Location Based 3D Image.
-	 * @param String $id Id of the AREL Object
-	 * @param String $title Title of the AREL Object to be displayed in the popup (if added) as well as list and map
-	 * @param String $imagePath Path to the JPG or PNG image that shall be displayed in the real world 
-	 * @param Array $location An array given all location parameters (latitude, longitude and altitude)
-	 * @param Array $scale An array providing scale values along three axis (x, y, z)
-	 * @param ArelRotation $rotation Provides the rotation information. Can be defined as euler (rad / deg), quaternion, axisangle or matrix 
-	 * @param String $icon provides an icon how the model will be displayed on a map (optional)
+	 * @brief 基本的なロケーションベースの3次元画像を作成
+	 * @param String $id：arelオブジェクトのID
+	 * @param String $title：ARELオブジェクトのタイトルも同様に、リストとマップとして（追加した場合）ポップアップで表示
+	 * @param String $imagePath：現実世界で表示するjpgやpng画像へのパス
+	 * @param Array $location：位置パラメータの配列（緯度、経度、高度）
+	 * @param Array $scale：3軸に沿ってスケール値を提供(x, y, z)
+	 * @param ArelRotatio $rotation：回転情報を提供。オイラー（ラジアン/度）、四元、axisangleまたはマトリクスとして定義することが可能。
+	 * @param String $icon：地図上に表示されるアイコンを提供する(オプション)
 	 */
 	
 	static public function createLocationBasedModel3DFromImage($id, $title, $imagePath, $location, $scale, $rotation, $icon = NULL)
@@ -109,14 +109,14 @@ class ArelXMLHelper
 	}
 
 	/**
-	 * @brief Create a basic Location Based POI (Textual representation with default design)
-	 * @param String $id Id of the AREL Object
-	 * @param String $title Title of the AREL Object to be displayed in the popup (if added) as well as list and map
-	 * @param Array $location An array given all location parameters (latitude, longitude and altitude)
-	 * @param String $thumbnail provides an thumbnail to be displayed in the liveview and on the list
-	 * @param String $icon provides an icon how the model will be displayed on a map (optional)
-	 * @param String $description The description to be written in the pop up or the additional information
-	 * @param Array $buttons An array defining buttons to be shown in the pop up / detail display 
+	 * @brief POIをベースとした位置情報を作成(デフォルトのデザインとテキスト表現)
+	 * @param String $id：arelオブジェクトのID
+	 * @param String $title：ARELオブジェクトのタイトルも同様に、リストとマップとして（追加した場合）ポップアップで表示
+	 * @param Array $location：位置パラメータの配列（緯度、経度、高度）
+	 * @param String $thumbnail：ライブビューで一覧に表示するサムネイルを提供
+	 * @param String $icon：地図上に表示されるアイコンを提供する(オプション)
+	 * @param String $description：ポップアップまたは付加情報に書き込まれる情報
+	 * @param Array $buttons：ポップ·アップ/詳細表示で使うボタンを定義
 	 
 	 */
 	static public function createLocationBasedPOI($id, $title, $location, $thumbnail, $icon, $description, $buttons = array())
@@ -140,13 +140,13 @@ class ArelXMLHelper
 	}
 	
 	 /**
-	 * @brief Create a 360 degree Object (3D Model)
-	 * @param String $id Id of the AREL Object
-	 * @param String $model Path to the model of the Object or to the zip package holding all the information
-	 * @param String $texture Path to the texture of the Object (jpg or png file) 
-	 * @param Array $translation An array given all translation parameters x,y,z
-	 * @param Array $scale An array providing scale values along three axis (x, y, z)
-	 * @param ArelRotation $rotation Provides the rotation information. Can be defined as euler (rad / deg), quaternion, axisangle or matrix 
+	 * @brief 360度のオブジェクトを作成(3Dモデル)
+	 * @param String $id：arelオブジェクトのID
+	 * @param String $model:：オブジェクトのモデルに、またはすべての情報を保持するzipパッケージへのパス
+	 * @param String $texture：オブジェクトのテクスチャへのパス（JPGまたはPNGファイル）
+	 * @param Array $translation：移動パラメータのx、y、z
+	 * @param Array $scale：3軸に沿ってスケール値を提供(x, y, z)
+	 * @param ArelRotation $rotation：回転情報を提供。オイラー（ラジアン/度）、四元、axisangleまたはマトリクスとして定義することが可能。
 	 * @param Int $renderPosition If you have multiple 360Objects created with transparencies
 	 */
 	static public function create360Object($id, $model, $texture, $translation, $scale, $rotation, $renderPosition = NULL)
@@ -164,13 +164,13 @@ class ArelXMLHelper
 
 	/**
 	 * @brief Create a basic Glue 3D Model.
-	 * @param String $id Id of the AREL Object
-	 * @param String $model Path to the model of the Object or to the zip package holding all the information
-	 * @param String $texture Path to the texture of the Object (jpg or png file) 
-	 * @param Array $translation An array given all translation parameters x,y,z
-	 * @param Array $scale An array providing scale values along three axis (x, y, z)
-	 * @param ArelRotation $rotation Provides the rotation information. Can be defined as euler (rad / deg), quaternion, axisangle or matrix 
-	 * @param Int $coordinateSystemID ID of the corrdinateSystem the model shall be attached to
+	 * @param String $id：arelオブジェクトのID
+	 * @param String $model:：オブジェクトのモデルに、またはすべての情報を保持するzipパッケージへのパス
+	 * @param String $texture：オブジェクトのテクスチャへのパス（JPGまたはPNGファイル）
+	 * @param Array $translation：移動パラメータnの提供(x, y, z)
+	 * @param Array $scale：3軸に沿ってスケール値を提供(x, y, z)
+	 * @param ArelRotation $rotation：回転情報を提供。オイラー（ラジアン/度）、四元、axisangleまたはマトリクスとして定義することが可能。
+	 * @param Int $coordinateSystemID：モデルを添付しなければならないcorrdinateSystemのID
 	 */
 	static public function createGLUEModel3D($id, $model, $texture, $translation, $scale, $rotation, $coordinateSystemID)
 	{
@@ -186,13 +186,13 @@ class ArelXMLHelper
 	}
 	
 	/**
-	 * @brief Create a Glue Movie Texture (Movie overlaid a real world object)
-	 * @param String $id Id of the AREL Object
-	 * @param String $moviePath Path to the 3G2 movie that shall be displayed on the reference (coordinate system)
-	 * @param Array $translation An array given all translation parameters x,y,z
-	 * @param Array $scale An array providing scale values along three axis (x, y, z)
-	 * @param ArelRotation $rotation Provides the rotation information. Can be defined as euler (rad / deg), quaternion, axisangle or matrix 
-	 * @param Int $coordinateSystemID ID of the corrdinateSystem the model shall be attached to
+	 * @brief Glue Movie Textureの作成(動画は、実世界のオブジェクトを重ねて作成)
+	 * @param String $id：arelオブジェクトのID
+	 * @param String $moviePath：現実世界で表示する3g2動画へのパス
+	 * @param $translation：移動パラメータnの提供(x, y, z)
+	 * @param Array $scale：3軸に沿ってスケール値を提供(x, y, z)
+	 * @param ArelRotation $rotation：回転情報を提供。オイラー（ラジアン/度）、四元、axisangleまたはマトリクスとして定義することが可能。
+	 * @param Int $coordinateSystemID：モデルを添付しなければならないcorrdinateSystemのID
 	 */
 	
 	static public function createGLUEModel3DFromMovie($id, $moviePath, $translation, $scale, $rotation, $coordinateSystemID)
@@ -209,12 +209,12 @@ class ArelXMLHelper
 	
 	/**
 	 * @brief Create a Glue Movie Texture (Movie overlaid a real world object)
-	 * @param String $id Id of the AREL Object
-	 * @param String $imagePath Path to the JPG or PNG image that shall be displayed in the real world 
-	 * @param Array $translation An array given all translation parameters x,y,z
-	 * @param Array $scale An array providing scale values along three axis (x, y, z)
-	 * @param ArelRotation $rotation Provides the rotation information. Can be defined as euler (rad / deg), quaternion, axisangle or matrix 
-	 * @param Int $coordinateSystemID ID of the corrdinateSystem the model shall be attached to
+	 * @param String $id：arelオブジェクトのID
+	 * @param String $imagePath：現実世界で表示するjpgやpng画像へのパス
+	 * @param $translation：移動パラメータnの提供(x, y, z)
+	 * @param Array $scale：3軸に沿ってスケール値を提供(x, y, z)
+	 * @param ArelRotation $rotation：回転情報を提供。オイラー（ラジアン/度）、四元、axisangleまたはマトリクスとして定義することが可能。
+	 * @param Int $coordinateSystemID：モデルを添付しなければならないcorrdinateSystemのID
 	 */
 	static public function createGLUEModel3DFromImage($id, $imagePath, $translation, $scale, $rotation, $coordinateSystemID)
 	{
@@ -230,13 +230,13 @@ class ArelXMLHelper
 	
 	/**
 	 * @brief Create a screen fixed 3D Model, meaning it is always stuck to the devices screen
-	 * @param String $id Id of the AREL Object
-	 * @param String $model Path to the model of the Object or to the zip package holding all the information
-	 * @param String $texture Path to the texture of the Object (jpg or png file) 
-	 * @param int $screenAnchor A constant defining the screen anchor @see ArelAnchor.
-	 * @param Array $scale An array providing scale values along three axis (x, y, z)
-	 * @param ArelRotation $rotation Provides the rotation information. Can be defined as euler (rad / deg), quaternion, axisangle or matrix
-	 * @return ArelObjectModel3D The object created
+	 * @param String $id：arelオブジェクトのID
+	 * @param String $model:：オブジェクトのモデルに、またはすべての情報を保持するzipパッケージへのパス
+	 * @param String $texture：オブジェクトのテクスチャへのパス（JPGまたはPNGファイル）
+	 * @param int $screenAnchor：定数ArelAnchor@see の画面アンカーを定義
+	 * @param Array $scale：3軸に沿ってスケール値を提供(x, y, z)
+	 * @param ArelRotation $rotation：回転情報を提供。オイラー（ラジアン/度）、四元、axisangleまたはマトリクスとして定義することが可能。
+	 * @return 作成されたArelObjectModel3Dを返す
 	 */
 	static public function createScreenFixedModel3D($id, $model, $texture, $screenAnchor, $scale, $rotation)
 	{
@@ -251,11 +251,11 @@ class ArelXMLHelper
 	}
 	
 	/**
-	 * @brief Start output to junaio
-	 * @param string $resourcesPath Path to a zip holding all resources (models, images, shader, materials) [NOT SUPPORTED AT THE MOMENT)
-	 * @param string $arelPath Path to a an HTML defining the GUI and hosting the arel JS
-	 * @param string $trackingXML Path to the tracking xml or identifier of what shall be done (LLA Marker, Barcode / QR code). If nothing is provided, GPS is assumed.
-	 * @param Array $sceneOptions An array providing scene options
+	 * @brief junaioへの出力を開始する
+	 * @param string $resourcesPath：すべてのリソース（モデル、画像、シェーダー、マテリアル）を保持するZIPへのパス
+	 * @param string $arelPath：arel JSホスティングとGUIを定義したHTMLへのパス
+	 * @param string $trackingXML：xmlのトラッキングもしくは識別子へのパス(LLAマーカー、バーコード/QRコード)。何も提供しない場合は、GPSが提供される。
+	 * @param Array $sceneOptions：シーンオプションを提供
 	 */
 	static public function start($resourcesPath = NULL, $arelPath = NULL, $trackingXML = null, $sceneOptions = NULL)
 	{
@@ -293,7 +293,7 @@ class ArelXMLHelper
 	}
 	
 	/**
-	 * @brief End the XML output to junaio
+	 * @brief junaioへのXML出力を終了
 	 */
 	static public function end()
 	{
@@ -302,8 +302,8 @@ class ArelXMLHelper
 	}
 	
 	/**
-	 * @brief Create the XML output of the AREL Object and send it to the junaio server.
-	 * @param ArelObject $oObject Object to be sent out
+	 * @brief ARELオブジェクトのXML出力を作成し、junaioサーバーに送信
+	 * @param ArelObject $oObject：オブジェクトを指定
 	 */
 	static public function outputObject($oObject)
 	{
@@ -533,10 +533,10 @@ class ArelXMLHelper
 	}	
 	
 	/**
-	 * @brief Create array of currently supported scene options (with expected keys and based on provided locations), which is used as argument when starting output to junaio.
-	 * @param String $environmentMapLocation Relative path or URL to environment map.
-	 * @param Array $shaderMaterialsLocation Relative path or URL to shader materials.
-	 * @return Array array of currently supported scene options.	 
+	 * @brief junaioへの出力を開始する際に、引数から現在サポートしているシーンオプションの配列(予期したkeyと提供場所から)を作成
+	 * @param String $environmentMapLocation：相対パスまたは環境マップへのURL
+	 * @param Array $shaderMaterialsLocation：相対パスまたはシェーダ素材へのURL
+	 * @return Array：現在サポートしているシーンオプションの配列
 	 */
 	public static function createSceneOptions($environmentMapLocation, $shaderMaterialsLocation = NULL)
 	{
