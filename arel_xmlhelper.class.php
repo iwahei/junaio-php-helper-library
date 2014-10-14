@@ -11,41 +11,41 @@ require_once 'SimpleXMLExtended.php';
 
 /**
  * 
- * A helper class to create correct junaio AREL output (XML).
+ * junaioのarelを出力(xml)を作成するヘルパークラス
  *
  */
 class ArelXMLHelper
 {	
 	/**
-	 * Tracking type GPS 
+	 * 追尾型GPS
 	 */
 	const TRACKING_GPS = "GPS";
 	
 	/**
-	 * Tracking type Orientation 
+	 * 追尾型適応性
 	 */
 	const TRACKING_ORIENTATION = "Orientation";
 	
 	/**
-	 * Tracking type LLA Marker 
+	 * 追尾型LLAマーカー
 	 */
 	const TRACKING_LLA_MARKER = "LLA";
 	
 	/**
-	 * Tracking type bar code and QR codes
+	 * 追尾型バーコード及びQRコード
 	 */
 	const TRACKING_BARCODE_QR = "Code";
 
 
-	/** @brief Create a basic Location Based 3D Model.
-	 * @param String $id Id of the AREL Object
-	 * @param String $title Title of the AREL Object to be displayed in the popup (if added) as well as list and map
-	 * @param String $model Path to the model of the Object or to the zip package holding all the information
-	 * @param String $texture Path to the texture of the Object (jpg or png file) 
-	 * @param Array $location An array given all location parameters (latitude, longitude and altitude)
-	 * @param Array $scale An array providing scale values along three axis (x, y, z)
-	 * @param ArelRotation $rotation Provides the rotation information. Can be defined as euler (rad / deg), quaternion, axisangle or matrix 
-	 * @param String $icon provides an icon how the model will be displayed on a map (optional)
+	/** @brief 3Dモデルベースの基本的な場所を作成
+	 * @param String $id：arelオブジェクトのID
+	 * @param String $title：ARELオブジェクトのタイトルも同様に、リストとマップとして（追加した場合）ポップアップで表示
+	 * @param String $model:：オブジェクトのモデルに、またはすべての情報を保持するzipパッケージへのパス
+	 * @param String $texture：オブジェクトのテクスチャへのパス（JPGまたはPNGファイル）
+	 * @param Array $location：位置パラメータの配列（緯度、経度、高度）
+	 * @param Array $scale：3軸に沿ってスケール値を提供する配列(x、y、z)
+	 * @param ArelRotation $rotation：回転情報を提供。オイラー（ラジアン/度）、四元、axisangleまたはマトリクスとして定義することが可能。
+	 * @param String $icon：地図上に表示されるアイコンを提供する(オプション)
 	 */
 	static public function createLocationBasedModel3D($id, $title, $model, $texture, $location, $scale, $rotation, $icon = NULL)
 	{
